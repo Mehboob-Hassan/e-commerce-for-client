@@ -38,7 +38,7 @@ app.post('/search-by-image', upload.single('image'), async (req, res) => {
             },
             {
                 headers: {
-                    'Authorization': `Token ${REPLICATE_API_TOKEN}`,
+                    'Authorization': `Token r8_LEcU2wV47inasnZsPu9YsyQhKdgoFTZ4BFfBv`,
                     'Content-Type': 'application/json'
                 }
             }
