@@ -51,7 +51,7 @@ app.post('/search-by-image', upload.single('image'), async (req, res) => {
 
         while (!result) {
             const poll = await axios.get(`https://api.replicate.com/v1/predictions/${predictionId}`, {
-                headers: { 'Authorization': `Token ${REPLICATE_API_TOKEN}` }
+                headers: { 'Authorization': `Token r8_LEcU2wV47inasnZsPu9YsyQhKdgoFTZ4BFfBv` }
             });
 
             if (poll.data.status === 'succeeded') {
