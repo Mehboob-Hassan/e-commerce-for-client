@@ -38,7 +38,7 @@ app.post('/search-by-image', upload.single('image'), async (req, res) => {
             },
             {
                 headers: {
-                    'Authorization': `Token r8_HE7msuwrOhoEKGL0FyyMrdtt88WhO7T2EAPs2`,
+                    'Authorization': `Token ${REPLICATE_API_TOKEN}`,
                     'Content-Type': 'application/json'
                 }
             }
@@ -51,7 +51,7 @@ app.post('/search-by-image', upload.single('image'), async (req, res) => {
 
         while (!result) {
             const poll = await axios.get(`https://api.replicate.com/v1/predictions/${predictionId}`, {
-                headers: { 'Authorization': `Token r8_HE7msuwrOhoEKGL0FyyMrdtt88WhO7T2EAPs2` }
+                headers: { 'Authorization': `Token ${REPLICATE_API_TOKEN}` }
             });
 
             if (poll.data.status === 'succeeded') {
